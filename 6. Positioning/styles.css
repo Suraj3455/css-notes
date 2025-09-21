@@ -1,0 +1,128 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding-bottom: 500px; /* Added for sticky/fixed examples */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* ------------------------------------------------ */
+/* Position Properties */
+/* ------------------------------------------------ */
+.static-relative {
+    position: relative; /* This is a positioning context for its children */
+}
+
+.static-box {
+    position: static; /* Default position. Elements are in normal document flow. */
+    background-color: #e6f7ff;
+    border: 1px solid #1890ff;
+    padding: 10px;
+    margin: 10px;
+}
+
+.relative-box {
+    position: relative; /* Positioned relative to its normal position. */
+    top: 20px;          /* Pushes the element 20px from the top of its normal position. */
+    left: 20px;         /* Pushes the element 20px from the left of its normal position. */
+    background-color: #d1f3e7;
+    border: 1px solid #52c41a;
+    padding: 20px;
+}
+
+.absolute-child {
+    position: absolute; /* Positioned relative to its closest positioned ancestor. */
+    top: 10px;          /* Positioned 10px from the top of its relative parent. */
+    right: 10px;        /* Positioned 10px from the right of its relative parent. */
+    background-color: #ffccc7;
+    border: 1px solid #f5222d;
+    padding: 5px;
+}
+
+.fixed-box {
+    position: fixed; /* Positioned relative to the viewport. It stays in place on scroll. */
+    top: 50px;
+    right: 50px;
+    background-color: #fffbe6;
+    border: 1px solid #faad14;
+    padding: 10px;
+    text-align: center;
+}
+
+.sticky-box {
+    position: sticky; /* Behaves like relative until a scroll position is met, then acts like fixed. */
+    top: 0;           /* Stays at the top of the viewport when scrolling past it. */
+    background-color: #f0f0f0;
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.scroll-filler {
+    height: 100px;
+}
+
+/* ------------------------------------------------ */
+/* Z-Index */
+/* ------------------------------------------------ */
+.z-index-example {
+    position: relative;
+    height: 100px;
+}
+
+.z-box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+
+.z-1 {
+    z-index: 1; /* This box will be behind elements with a higher z-index */
+    background-color: #9c27b0;
+    top: 0;
+    left: 100px;
+}
+
+.z-2 {
+    z-index: 2; /* This box will be on top of elements with a lower z-index */
+    background-color: #00bcd4;
+    top: 20px;
+    left: 120px;
+}
+
+/* ------------------------------------------------ */
+/* Float & Clear */
+/* ------------------------------------------------ */
+.float-clear {
+    overflow: auto; /* A common method to contain floated elements */
+}
+
+.floated-image {
+    float: right; /* Pushes the image to the right and allows text to wrap around it. */
+    margin: 0 0 10px 15px;
+}
+
+.clear-div {
+    clear: both; /* Prevents the div from being placed next to a floated element. */
+    border: 1px solid #cddc39;
+    background-color: #f0f4c3;
+    padding: 10px;
+}

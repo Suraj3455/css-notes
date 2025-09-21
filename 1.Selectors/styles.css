@@ -1,0 +1,114 @@
+/* Universal Selector: Affects all elements. */
+* {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Type/Element Selector: Styles all h1 elements. */
+h1 {
+    color: teal;
+}
+
+/* Class Selector: Styles all elements with the class "title". */
+.title {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* ID Selector: Styles the unique element with the ID "container". */
+#container {
+    border: 2px solid gray;
+    padding: 15px;
+}
+
+/* Grouping Selectors: Applies the same style to h2, h3, and h4. */
+h2, h3, h4 {
+    color: darkred;
+    border-bottom: 1px solid darkred;
+}
+
+/* Descendant Combinator: Selects all <p> elements inside a <section>. */
+section p {
+    color: purple;
+}
+
+/* Child Combinator: Selects direct child <p> elements of a <section>. */
+section > p {
+    font-weight: bold;
+}
+
+/* Adjacent Sibling Combinator: Selects a <p> element directly after a <div>. */
+div + p {
+    margin-top: 20px;
+}
+
+/* General Sibling Combinator: Selects all <p> elements that follow a <span>. */
+span ~ p {
+    background-color: lightyellow;
+}
+
+/* Attribute Selectors: Selects a link with a specific attribute value. */
+a[target="_blank"] {
+    color: rgb(248, 171, 29);
+}
+/* Selects an input element with a specific attribute type. */
+input[type="text"] {
+    border: 1px solid #dc0b0b;
+    padding: 5px;
+}
+
+/* Pseudo-classes */
+/* Styles a link when a user hovers over it. */
+.pseudo-link:hover {
+    color: green;
+    text-decoration: none;
+}
+/* Styles an input element when it is in focus. */
+input:focus {
+    outline: 2px solid dodgerblue;
+}
+/* Styles a link when it is being clicked. */
+.pseudo-link:active {
+    color: rgb(255, 21, 0);
+}
+/* Selects the first <li> element. */
+.list li:first-child {
+    font-weight: bold;
+}
+/* Selects the 2nd, 4th, etc. list items. */
+.list li:nth-child(2n) {
+    background-color: #f0f0f0;
+}
+/* Selects all <li> elements that are not the fifth child. */
+.list li:not(:nth-child(5)) {
+    list-style-type: square;
+}
+
+/* Pseudo-elements */
+/* Inserts content before the paragraph's content. */
+.styled-paragraph::before {
+    content: "📌 ";
+    color: #00ff08;
+}
+/* Inserts content after the paragraph's content. */
+.styled-paragraph::after {
+    content: " — End of paragraph.";
+    font-style: italic;
+    color: #ff0000;
+}
+/* Styles the first letter of the paragraph. */
+/* comment this .styled-paragraph::before {
+    content: "📌 ";
+    color: #00ff08;
+} */
+.styled-paragraph::first-letter {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ff77;
+}
+/* Styles the first line of the paragraph. */
+.styled-paragraph::first-line {
+    font-weight: bold;
+    text-transform: unset;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All CSS Selectors Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>All CSS Selectors Demo</h1>
+    <p>This paragraph is styled by type and universal selectors.</p>
+
+    <hr>
+
+    <div id="container">
+        <h2 class="title">Container Heading</h2>
+        <p class="intro">This intro text has a class.</p>
+        <p>This paragraph is styled by its parent's ID.</p>
+    </div>
+    <h3>Subheading 1</h3>
+    <h4>Subheading 2</h4>
+
+    <hr>
+
+    <section>
+        <p class="title">Combinators</p>
+        <p>This is a direct child of the section.</p>
+        <div>
+            <p>This is a descendant paragraph.</p>
+        </div>
+        <p>This paragraph is adjacent to the div.</p>
+        <span>A span.</span>
+        <p>This paragraph is a general sibling.</p>
+    </section>
+
+    <hr>
+
+    <a href="https://example.com" class="title">Attribute Selectors</a>
+    <a href="https://google.com" target="_blank">External Link</a>
+    <input type="text" placeholder="Text Input">
+    <button type="submit">Submit</button>
+
+    <hr>
+
+    <p class="title">Pseudo-classes</p>
+    <a href="#" class="pseudo-link">Hover Me</a>
+    <input type="text" placeholder="Focus on Me">
+    <ul class="list">
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ul>
+
+    <hr>
+
+    <p class="title">Pseudo-elements</p>
+    <p class="styled-paragraph">
+        This is a paragraph where we will demonstrate pseudo-elements. The first letter will be a drop cap and the first line will be bolded.
+    </p>
+
+</body>
+</html>

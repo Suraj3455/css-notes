@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Positioning</h1>
+
+        <div class="section static-relative">
+            <h2>Static & Relative Positioning</h2>
+            <div class="static-box">Static Box</div>
+            <div class="relative-box">
+                Relative Box
+                <div class="absolute-child">Absolute Child</div>
+            </div>
+            <div class="static-box">Static Box</div>
+        </div>
+
+        <div class="section fixed-sticky">
+            <h2>Fixed & Sticky Positioning</h2>
+            <div class="fixed-box">Fixed Box</div>
+            <p class="scroll-filler">Scroll down to see the sticky element in action!</p>
+            <div class="sticky-box">Sticky Box</div>
+            <p class="scroll-filler">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia!
+                <br><br>
+            </p>
+        </div>
+
+        <div class="section z-index-example">
+            <h2>Z-Index</h2>
+            <div class="z-box z-1">Z-Index 1</div>
+            <div class="z-box z-2">Z-Index 2</div>
+        </div>
+
+        <div class="section float-clear">
+            <h2>Float & Clear</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnFQtgZ23LnAEhYRqcWRLk2vvCy7dNZklZpg&s" alt="Placeholder image" class="floated-image">
+            <p>
+                The `float` property is used for wrapping text around an element, like an image. This text wraps around the floated image. The image is floated to the right, and the surrounding text flows to its left side.
+            </p>
+            <div class="clear-div">This div uses `clear: both;` to prevent it from wrapping around the floated image above.</div>
+        </div>
+    </div>
+
+</body>
+</html>

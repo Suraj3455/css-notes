@@ -1,0 +1,86 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.box {
+    margin-bottom: 20px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------- */
+/* Box One: Basic Box Properties */
+/* ---------------------------------------------------- */
+.box-one {
+    width: 80%; /* Width as a percentage */
+    height: 150px; /* Fixed height */
+    padding: 20px; /* Padding on all sides */
+    margin: 30px; /* Margin on all sides */
+    background-color: #93dff8;
+}
+
+/* ---------------------------------------------------- */
+/* Box Two: Borders */
+/* ---------------------------------------------------- */
+.box-two {
+    border-width: 5px; /* Border thickness */
+    border-style: solid; /* Type of border */
+    border-color: #4CAF50; /* Color of the border */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* ---------------------------------------------------- */
+/* Box Three: Min/Max Dimensions */
+/* ---------------------------------------------------- */
+.box-three {
+    min-width: 300px; /* Minimum width */
+    max-width: 600px; /* Maximum width */
+    height: 100px;
+    margin: 20px auto; /* Centered with auto margins */
+    background-color: #fff3cd;
+}
+
+/* ---------------------------------------------------- */
+/* Box Four: Overflow */
+/* ---------------------------------------------------- */
+.box-four {
+    height: 120px; /* Fixed height to force overflow */
+    border: 2px dashed #f44336;
+
+    /* To demonstrate all four values of overflow */
+    /* overflow: visible;  (Default) Content spills out */
+    /* overflow: hidden;   (Content is clipped and not shown) */
+    /* overflow: scroll;   (Scrollbars are always visible) */
+    overflow: auto; /* Scrollbars only appear when needed */
+}
+
+/* ---------------------------------------------------- */
+/* Box Five: Box-Sizing */
+/* ---------------------------------------------------- */
+.box-five {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2196F3;
+    background-color: #e0f2fe;
+
+    /* The box-sizing property */
+    box-sizing: border-box; /* Includes padding and border in the total width/height */
+}

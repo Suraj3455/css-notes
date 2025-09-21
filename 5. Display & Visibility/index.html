@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display & Visibility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Display & Visibility Properties</h1>
+
+        <div class="section">
+            <h2>Display Properties</h2>
+            <div class="display-examples">
+                <span class="inline-box">inline</span>
+                <span class="inline-box">inline</span>
+            </div>
+            <div class="display-examples">
+                <div class="block-box">block</div>
+                <div class="block-box">block</div>
+            </div>
+            <div class="display-examples">
+                <div class="inline-block-box">inline-block</div>
+                <div class="inline-block-box">inline-block</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Flexbox & Grid</h2>
+            <div class="flex-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">A</div>
+                <div class="grid-item">B</div>
+                <div class="grid-item">C</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Visibility & Opacity</h2>
+            <p>This text is <span class="visible-span">visible</span> and you can see it.</p>
+            <p>This text is <span class="hidden-span">hidden</span> and it takes up space.</p>
+            <p>This text is <span class="collapse-span">collapsed</span> and it doesn't take up space.</p>
+            <div class="opacity-box">This box has 50% opacity.</div>
+            <div class="none-box">This box has `display: none;`</div>
+            <p>The `display: none;` box is completely removed from the document flow, unlike the hidden element.</p>
+        </div>
+    </div>
+
+</body>
+</html>

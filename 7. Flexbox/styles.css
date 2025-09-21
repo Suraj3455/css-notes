@@ -1,0 +1,96 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.flex-container {
+    /* Main container properties */
+    display: flex;
+    border: 2px dashed #333;
+    padding: 10px;
+    min-height: 150px;
+}
+
+.item {
+    background-color: #add8e6;
+    border: 1px solid #3182b8;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+    margin: 5px;
+}
+
+/* ------------------------------------------------ */
+/* Direction & Wrap */
+/* ------------------------------------------------ */
+.direction-wrap {
+    flex-direction: column-reverse; /* Default: lays out items in a row */
+    flex-wrap: wrap;     /* Wraps items to the next line if they don't fit */
+}
+
+/* ------------------------------------------------ */
+/* Justify Content & Align Items */
+/* ------------------------------------------------ */
+.justify-align {
+    justify-content: space-around; /* Distributes items with space before, between, and after them */
+    align-items: center;            /* Vertically centers items within the container */
+}
+
+/* ------------------------------------------------ */
+/* Align Content */
+/* ------------------------------------------------ */
+.align-content-example {
+    flex-wrap: wrap;
+    align-content: space-between; /* Aligns wrapped lines with space between them */
+    height: 300px; /* Required to see the effect */
+}
+
+/* ------------------------------------------------ */
+/* Flex Grow, Shrink & Basis */
+/* ------------------------------------------------ */
+.flex-basis-grow-shrink .item {
+    flex-basis: 100px; /* Default size of the item before remaining space is distributed */
+}
+.item-grow {
+    flex-grow: 1; /* Allows the item to grow to fill available space */
+}
+.item-shrink {
+    flex-shrink: 2; /* Shrinks faster than other items if needed */
+}
+.item-basis {
+    flex-basis: 150px; /* Overrides the common basis for this item */
+}
+
+/* ------------------------------------------------ */
+/* Align Self & Order */
+/* ------------------------------------------------ */
+.align-self-order {
+    align-items: start; /* Default alignment for all items in this container */
+}
+.align-self-start {
+    align-self: stretch; /* Overrides the container's align-items setting for this one item */
+}
+.order-1 {
+    order: -1; /* Sets the display order of the item. Lower numbers appear first. */
+    
+}
+.order-2 {
+    order: 0;
+}
+.order-3 {
+    order: 1;
+}

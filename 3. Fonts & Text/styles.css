@@ -1,0 +1,78 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* ------------------------------------------------ */
+/* Basic Font Properties */
+/* ------------------------------------------------ */
+.heading-one {
+    font-family: 'Georgia', serif; /* Font Family */
+    font-size: 2.5em;              /* Font Size */
+    font-weight: bold;             /* Font Weight */
+    font-style: italic;            /* Font Style */
+    text-align: center;
+}
+
+.font-example {
+    font-family: 'Verdana', sans-serif; /* A different font family */
+    font-size: 1.2rem;                  /* Relative font size */
+    font-weight: 500;                   /* A specific font weight */
+    font-style: normal;
+}
+
+/* ------------------------------------------------ */
+/* Spacing & Alignment */
+/* ------------------------------------------------ */
+.spacing-example {
+    line-height: 2;         /* Double spacing between lines */
+    letter-spacing: 50px;    /* 2px space between letters */
+    word-spacing: 10px;      /* 5px space between words */
+}
+
+.alignment-example {
+    text-align: right;         /* Aligns text to the center */
+    text-decoration: underline; /* Draws a line through the text */
+    text-transform: uppercase;     /* Transforms text to all uppercase */
+}
+
+.shadow-example {
+    text-shadow: 20px 20px 4px #e71d1d; /* Adds a text shadow */
+}
+
+/* ------------------------------------------------ */
+/* Wrapping & White Space */
+/* ------------------------------------------------ */
+.white-space-example {
+    border: 1px solid #ccc;
+    padding: 10px;
+    white-space: pre; /* Preserves extra spaces and line breaks */
+    overflow-x: auto; /* Adds a horizontal scrollbar if needed */
+}
+
+.wrapping-example {
+    width: 200px; /* A fixed width to demonstrate wrapping */
+    border: 1px solid #ccc;
+    padding: 10px;
+    word-wrap: break-word; /* Breaks long words to prevent overflow */
+    overflow-wrap: break-word; /* Modern equivalent of word-wrap */
+}

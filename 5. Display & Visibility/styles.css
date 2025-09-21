@@ -1,0 +1,125 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------------- */
+/* Display Properties */
+/* ------------------------------------------- */
+.display-examples {
+    border: 2px dashed #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.inline-box {
+    display: inline; /* Displays inline, respecting other elements on the same line. */
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #00e1ff;
+}
+
+.block-box {
+    display: block; /* Takes up the full width available and forces a new line. */
+    background-color: #e8f5e9;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #4caf50;
+}
+
+.inline-block-box {
+    display: inline-block; /* Behaves like inline but can have width and height. */
+    background-color: #fff3e0;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ff9800;
+}
+
+/* ------------------------------------------- */
+/* Flexbox & Grid */
+/* ------------------------------------------- */
+.flex-container {
+    display: flex; /* Creates a flex container */
+    gap: 10px;
+    border: 2px dashed #90a4ae;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.flex-item {
+    background-color: #cfd8dc;
+    padding: 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid; /* Creates a grid container */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 2px dashed #7e57c2;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #d1c4e9;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ------------------------------------------- */
+/* Visibility & Opacity */
+/* ------------------------------------------- */
+.visible-span {
+    visibility: visible; /* Default value, the element is visible */
+    background-color: #4CAF50;
+    color: white;
+    padding: 2px 5px;
+}
+
+.hidden-span {
+    visibility: hidden; /* Hides the element, but it still occupies its space. */
+    background-color: #f44336;
+    color: white;
+    padding: 2px 5px;
+}
+
+.collapse-span {
+    visibility: collapse; /* Hides table rows/columns without taking up space. */
+    background-color: #ffc107;
+    color: white;
+    padding: 2px 5px;
+}
+
+.opacity-box {
+    background-color: #008cff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin-top: 15px;
+    opacity: 0.3; /* Makes the entire element semi-transparent. */
+}
+
+.none-box {
+    display: none; /* The element is completely removed from the document. */
+    background-color: #607d8b;
+    color: white;
+    padding: 15px;
+    margin-top: 15px;
+}

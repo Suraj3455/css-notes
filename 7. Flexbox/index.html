@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Flexbox Properties</h1>
+
+        <div class="section flex-direction-wrap">
+            <h2>Direction & Wrap</h2>
+            <div class="flex-container direction-wrap">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+            </div>
+        </div>
+
+        <div class="section justify-align">
+            <h2>Justify Content & Align Items</h2>
+            <div class="flex-container justify-align">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+
+        <div class="section align-content-example">
+            <h2>Align Content</h2>
+            <div class="flex-container align-content-example">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+
+        <div class="section flex-basis-grow-shrink">
+            <h2>Flex Basis, Grow & Shrink</h2>
+            <div class="flex-container flex-basis-grow-shrink">
+                <div class="item item-grow">Grow (1)</div>
+                <div class="item item-shrink">Shrink (2)</div>
+                <div class="item item-basis">Basis (150px)</div>
+            </div>
+        </div>
+
+        <div class="section align-self-order">
+            <h2>Align Self & Order</h2>
+            <div class="flex-container align-self-order">
+                <div class="item order-3">Order 3</div>
+                <div class="item order-1 align-self-start">Order 1 & Align Start</div>
+                <div class="item order-2">Order 2</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

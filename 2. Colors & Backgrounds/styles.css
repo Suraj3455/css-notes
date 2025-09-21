@@ -1,0 +1,110 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* HEX color */
+    margin: 0;
+    padding: 20px;
+    color: rgb(51, 51, 51); /* RGB color */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white; /* Color Name */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-heading {
+    text-align: center;
+    color: hsla(240, 50%, 40%, 1); /* HSLA color */
+}
+
+/* ---------------------------------------------------- */
+/* Section 1: Color Formats & Opacity */
+/* ---------------------------------------------------- */
+.box-one {
+    background-color: #e6f7ff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(173, 216, 230, 0.5); /* RGBA color */
+}
+
+.text-one {
+    color: #FF5733; /* HEX */
+}
+
+.text-two {
+    color: rgb(50, 205, 50); /* RGB */
+}
+
+.text-three {
+    color: rgba(138, 43, 226, 0.5); /* RGBA with 50% opacity */
+}
+
+.text-four {
+    color: hsl(200, 80%, 30%); /* HSL */
+}
+
+.text-five {
+    color: hsla(30, 100%, 50%, 0.7); /* HSLA with 70% opacity */
+}
+
+/* ---------------------------------------------------- */
+/* Section 2: Gradients */
+/* ---------------------------------------------------- */
+.box-two {
+    height: 150px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* linear-gradient */
+    background-image: linear-gradient(to right, red, orange, rgb(255, 255, 0), rgb(240, 0, 0), rgb(255, 122, 126), rgb(255, 255, 255), rgb(208, 208, 208));
+    color: rgb(255, 255, 255);
+}
+
+/* ---------------------------------------------------- */
+/* Section 3: Background Image Properties */
+/* ---------------------------------------------------- */
+.box-three {
+    height: 300px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+
+    /* A simple placeholder image for demonstration */
+    background-image: url('https://static.gujaratsamachar.com/content_image/content_image_900a7cc0-bad4-47c9-8f5f-f38aed140bfa.jpeg');
+
+    /* background-repeat */
+    background-repeat: no-repeat;
+
+    /* background-position */
+    background-position: top ;
+
+    /* background-size */
+    background-size: cover;
+
+    /* background-attachment */
+    background-attachment: attachment;
+
+    /* background-clip (shows the background within the padding box) */
+    background-clip: padding-box;
+    border: 10px dotted orange;
+    color: rgb(255, 255, 255);
+}
+.box-four {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 10px 2px black;
+    border-radius: 10px;
+
+    /* The radial gradient declaration */
+    background-image: radial-gradient(circle, red, yellow,green);
+    
+}
