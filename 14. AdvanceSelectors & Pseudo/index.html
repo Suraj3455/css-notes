@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Advanced Selectors & Pseudo-elements</h1>
+
+        <section>
+            <h2>:nth-of-type() & :nth-last-child()</h2>
+            <ul class="list-nth-child">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+                <li>Fourth item</li>
+                <li>Fifth item</li>
+            </ul>
+            <p>This is the first paragraph.</p>
+            <p>This is the second paragraph.</p>
+            <p>This is the third paragraph.</p>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>:only-child & :empty</h2>
+            <div class="only-child-container">
+                <p>This paragraph is an only child.</p>
+            </div>
+            <div class="only-child-container">
+                <p>This is one of two children.</p>
+                <p>This is the second child.</p>
+            </div>
+            
+            <div class="empty-container">
+                <p>This container has content.</p>
+            </div>
+            <div class="empty-container">
+                </div>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>:checked & ::marker</h2>
+            <form>
+                <input type="checkbox" id="my-checkbox">
+                <label for="my-checkbox">Check me!</label>
+                <input type="radio" name="option" id="radio1" checked>
+                <label for="radio1">Option 1 (Checked)</label>
+                <input type="radio" name="option" id="radio2">
+                <label for="radio2">Option 2</label>
+            </form>
+            
+            <ul class="list-marker">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ul>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>::selection</h2>
+            <p class="selection-text">Select some of this text with your mouse to see the effect.</p>
+        </section>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists & Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        /* --- Lists --- */
+        ul.custom-list {
+            /* Sets the marker type to a square. */
+            list-style-type: square;
+            /* list-style-type: "\1F44D";  */
+            /* Sets a custom image for the list marker. This will override list-style-type. */
+            /* list-style-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRidJZK0GMHafDqzT9CY49XJmpMckDUqmAsrnDpWcvvWOhrPQNJ0dC4objMCC5V2lrQDUcH&s" ); */
+            list-style-image: linear-gradient(to left bottom, red, blue);
+            /* Positions the marker inside the list item's content box. */
+            list-style-position: inside; 
+            /*  */
+            padding-left: 0;
+        }
+
+        /* --- Tables --- */
+        table {
+            width: 100%;
+            border: 10px solid #ccc;
+            margin-top: 20px;
+            /* Collapses the borders of adjacent cells into a single border. */
+            border-collapse: separate; 
+            /* Specifies the distance between the borders of adjacent cells. This property only works when border-collapse is separate. */
+            border-spacing: 10px; 
+            /* Sets the table's layout algorithm to 'fixed', which makes column widths determined by the first row. */
+            table-layout: fixed; 
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        caption {
+            /* Positions the caption at the bottom of the table. */
+            caption-side: top; 
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .align-top {
+            /* Aligns the content to the top of the cell. */
+            vertical-align: top; 
+        }
+
+        .align-middle {
+            /* Aligns the content to the middle of the cell. */
+            vertical-align: middle; 
+        }
+
+        .align-bottom {
+            /* Aligns the content to the bottom of the cell. */
+            vertical-align: bottom; 
+        }
+
+        /* Optional: Add some styling for better visual separation */
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lists</h2>
+    <p>Using <code>list-style-type</code>, <code>list-style-image</code>, and <code>list-style-position</code>.</p>
+    <ul class="custom-list">
+        <li>Item 1</li>
+        <li>Item 2
+            <p>This is a paragraph inside a list item. The marker is placed inside the content box.</p>
+        </li>
+        <li>Item 3</li>
+    </ul>
+
+    <hr>
+
+    <h2>Tables</h2>
+    <p>Using <code>border-collapse</code>, <code>border-spacing</code>, <code>table-layout</code>, <code>caption-side</code>, and <code>vertical-align</code>.</p>
+
+    <table>
+        <caption>A simple table demonstrating CSS properties.</caption>
+        <colgroup>
+            <col style="width: 20%;">
+            <col style="width: 40%;">
+            <col style="width: 40%;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="align-top">Top Aligned Text</td>
+                <td class="align-middle">Middle Aligned Text</td>
+                <td class="align-bottom">Bottom Aligned Text</td>
+            </tr>
+            <tr>
+                <td>Short content</td>
+                <td>
+                    A longer piece of content to demonstrate how <code>table-layout: fixed;</code> works. The column width is determined by the first row, so this content might wrap.
+                </td>
+                <td>More content.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

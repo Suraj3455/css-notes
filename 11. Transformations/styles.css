@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    color: #333;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.box {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* --- Individual Transformations --- */
+
+/* translate: Moves an element from its current position. */
+.box-translate:hover {
+    transform: translateX(20px) translateY(-10px);
+}
+
+/* rotate: Rotates an element clockwise or counter-clockwise. */
+.box-rotate:hover {
+    transform: rotate(20deg);
+}
+
+/* scale: Increases or decreases the size of an element. */
+.box-scale:hover {
+    transform: scale(1.2);
+}
+
+/* skew: Skews an element along the X and Y axes. */
+.box-skew:hover {
+    transform: skew(15deg, 5deg);
+}
+
+/* transform-origin: Changes the point around which a transformation is applied. */
+.box-origin {
+    /* Initially rotates from the default center. */
+    transform: rotate(0deg); 
+    transition: transform 0.6s ease-in-out;
+}
+.box-origin:hover {
+    /* Rotates from the top-left corner (0 0). */
+    transform-origin: 0 0; 
+    transform: rotate(45deg);
+}
+
+/* perspective: Adds a 3D effect to the container. */
+.box-perspective-container {
+    /* Sets the perspective distance on the parent container. */
+    perspective: 1000px; 
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.box-3d-text {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    /* The transform is applied to the child element in 3D space. */
+    transform-style: preserve-3d; 
+    transition: transform 1s ease;
+}
+
+.box-3d-text:hover {
+    /* Rotates the element around the Y-axis in 3D. */
+    transform: rotateY(45deg);
+}

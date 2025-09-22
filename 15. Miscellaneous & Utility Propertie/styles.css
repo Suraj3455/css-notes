@@ -1,0 +1,148 @@
+html {
+    /* Enables smooth scrolling for all anchor links on the page. */
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: #0077b6;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: #e6f7ff;
+    border: 2px solid #0077b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* --- cursor, user-select, pointer-events --- */
+.cursor-pointer {
+    /* Changes the mouse pointer to a hand when hovering over the element. */
+    cursor: pointer; 
+}
+
+.user-select-none {
+    /* Prevents the user from being able to select the text content. */
+    user-select: none; 
+}
+
+.pointer-events-none {
+    /* The element will not be the target of mouse events. The button inside is "un-clickable". */
+    pointer-events: none; 
+}
+
+.pointer-events-none button {
+    /* You can override pointer-events on a child element if needed. */
+    pointer-events: auto; 
+}
+
+/* --- box-shadow, text-shadow --- */
+.box-shadow-example {
+    /* box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-example {
+    /* text-shadow: horizontal-offset vertical-offset blur-radius color; */
+    text-shadow: 2px 2px 4px #888;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- outline --- */
+.outline-example {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    /* Prevents the browser's default outline on focus. */
+    outline: none; 
+}
+.outline-example:focus {
+    /* Adds a custom outline on focus for accessibility. */
+    outline: 2px dashed #0077b6;
+    outline-offset: 4px;
+}
+
+/* --- object-fit, object-position, filter --- */
+.image-container {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative; /* For object-position to work correctly */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-fill {
+    /* Stretches the image to fill the container, may distort aspect ratio. */
+    object-fit: fill; 
+}
+
+.img-contain {
+    /* The image scales down to fit inside the container, maintaining aspect ratio. */
+    object-fit: contain; 
+}
+
+.img-cover {
+    /* The image scales to fill the container, maintaining aspect ratio and cropping any excess. */
+    object-fit: cover; 
+}
+
+.img-position {
+    /* Aligns the image within the container. */
+    object-fit: none; 
+    /* Centers the image within the container. */
+    object-position: center; 
+}
+
+.img-filter {
+    /* Applies visual effects like grayscale, sepia, blur, etc. */
+    filter: grayscale(100%) blur(2px) sepia(50%); 
+}
+
+/* --- clip-path --- */
+.clipped-box {
+    width: 200px;
+    height: 200px;
+    background-color: #e74c3c;
+    /* Clips the element into a circle. */
+    clip-path: circle(50%); 
+}

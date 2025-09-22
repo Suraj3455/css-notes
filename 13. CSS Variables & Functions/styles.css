@@ -1,0 +1,69 @@
+/* --- 1. Custom Properties & var() --- */
+/* :root pseudo-class is used to define global variables */
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #48cae4;
+    --font-family: Arial, sans-serif;
+    --card-bg-color: #f0f8ff;
+    --card-border-color: #0077b6;
+}
+
+body {
+    font-family: var(--font-family); /* Using the custom variable */
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.card {
+    background-color: var(--card-bg-color); /* Using a custom variable */
+    border: 2px solid var(--card-border-color); /* Using the same variable */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 2. calc(), min(), max(), clamp() --- */
+.card-functions {
+    /* Using calc() to create a dynamic width */
+    width: calc(100% - 40px);
+    
+    /* min() chooses the smallest value. The padding will be either 20px or 5% of the viewport width, whichever is smaller. */
+    padding: min(20px, 5vw); 
+
+    /* max() chooses the largest value. The top margin will be either 15px or 3vw, whichever is larger. */
+    margin-top: max(15px, 3vw); 
+
+    /* clamp() keeps a value between a minimum and a maximum.
+       Syntax: clamp(min, preferred, max)
+       Font size will be at least 16px, at most 24px, and will scale with the viewport using 2vw in between. */
+    font-size: clamp(16px, 2vw, 24px); 
+}
+
+/* --- 3. attr() --- */
+.card-attr .attr-text::after {
+    /* The attr() function fetches the value of the 'data-text-content' attribute on the parent element and uses it as content. */
+    content: attr(data-text-content);
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.card-attr {
+    /* The padding here is a fixed value to show attr() more clearly, but could use functions too */
+    padding-bottom: 50px; 
+}

@@ -1,0 +1,102 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    /* Defines the grid structure using named areas and specifies the size of columns and rows. */
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "sidebar box1 box2"
+        "sidebar box3 box3"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr; /* Defines three columns: one flexible unit, two flexible units, and one flexible unit. */
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr; /* Defines five rows with flexible heights. */
+
+    /* Sets the gap between grid items. */
+    grid-gap: 20px; 
+    /* row-gap: 20px; /* You can use these instead of grid-gap for more specific control. */
+    /* column-gap: 20px; */
+
+    height: 100vh;
+    border: 2px solid #555;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header, .sidebar, .main, .footer, .box {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+.header {
+    background-color: #4CAF50;
+    /* Assigns the item to the 'header' area. */
+    grid-area: header; 
+    justify-self: stretch; /* Stretches the item horizontally within its grid cell.
+    /* align-self: stretch; /* Stretches the item vertically within its grid cell. */
+}
+
+.sidebar {
+    background-color: #2196F3;
+    /* Assigns the item to the 'sidebar' area. */
+    grid-area: sidebar; 
+    /* justify-self: start; /* Aligns the item to the start of the cell's horizontal axis. */
+    /* align-self: center; /* Aligns the item to the center of the cell's vertical axis. */
+    justify-self: stretch;
+}
+
+.main {
+    background-color: #FF9800;
+    /* Assigns the item to the 'main' area. */
+    grid-area: main; 
+    justify-self: stretch;
+}
+
+.box {
+    background-color: #a5a5a5;
+    justify-self: stretch;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+
+.box3 {
+    background-color: #00BCD4;
+    /* Places the item starting at the third column line and spanning two columns. */
+    grid-column: 3 / span 2; 
+    /* Places the item starting at the fourth row line and spanning one row. */
+    grid-row: 4 / 5; 
+    grid-area: box3; /* This will be overridden by grid-column and grid-row. */
+}
+
+.footer {
+    background-color: #607D8B;
+    grid-area: footer;
+    justify-self: stretch;
+}
+
+/* * Properties for the grid container
+ */
+.grid-container {
+    /* Aligns all items along the horizontal axis within their cells. */
+    justify-items: center; 
+    /* Aligns all items along the vertical axis within their cells. */
+    align-items: center; 
+    
+    /* Aligns the entire grid content along the horizontal axis. */
+    justify-content: center; 
+    /* Aligns the entire grid content along the vertical axis. */
+    align-content: center;
+}

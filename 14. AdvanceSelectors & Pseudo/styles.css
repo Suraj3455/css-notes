@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0077b6;
+}
+
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* --- :nth-of-type() & :nth-last-child() --- */
+
+/* Selects the second list item of its type (an li). */
+.list-nth-child li:nth-of-type(2) {
+    background-color: #e6f7ff;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* Selects every odd paragraph of its type. */
+section p:nth-of-type(odd) {
+    color: #005691;
+    font-style: italic;
+}
+
+/* Selects the third element from the end of its parent. */
+.list-nth-child li:nth-last-child(3) {
+    border-bottom: 2px solid #0077b6;
+}
+
+/* --- :only-child & :empty --- */
+
+/* Selects a paragraph that is the only child of its parent. */
+.only-child-container p:only-child {
+    background-color: #d4edda;
+    border: 2px solid #155724;
+    padding: 10px;
+}
+
+/* Selects a div with the class 'empty-container' that has no content. */
+.empty-container:empty {
+    height: 50px;
+    background-color: #f8d7da;
+    border: 2px dashed #721c24;
+}
+
+/* --- :checked & ::marker --- */
+
+/* Styles the element when it's in a checked state (e.g., checkbox, radio). */
+input[type="checkbox"]:checked + label {
+    color: #28a745;
+    font-weight: bold;
+}
+
+input[type="radio"]:checked + label {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* ::marker pseudo-element styles the list item bullet or number. */
+.list-marker li::marker {
+    color: #dc3545;
+    font-size: 1.2em;
+}
+
+/* --- ::selection --- */
+
+/* ::selection pseudo-element styles the selected portion of a text. */
+.selection-text::selection {
+    background-color: #ffc107;
+    color: #333;
+}

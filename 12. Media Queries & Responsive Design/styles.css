@@ -1,0 +1,98 @@
+/* --- Global & Base Styles (Mobile-First) --- */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 8vw; /* **Viewport Unit** for responsive heading size */
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Stacks cards vertically on small screens */
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #007bff;
+}
+
+/* **Responsive Images** */
+img {
+    max-width: 100%; /* Ensures the image never overflows its container */
+    height: auto;    /* Maintains the aspect ratio */
+    display: block;  /* Removes extra space below the image */
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* **Responsive Text** with Viewport Units */
+.responsive-text {
+    font-size: 4vw; /* Font size scales with viewport width */
+}
+
+/* --- Media Queries (Breakpoints) --- */
+
+/* **Small Screens (Breakpoints):** */
+/* No media query needed as we are using a **mobile-first** approach. The base styles are for mobile. */
+
+/* **Medium Screens (Tablets):** This media query applies styles when the viewport is 600px or wider. */
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 5vw;
+    }
+    .responsive-text {
+        font-size: 2.5vw;
+    }
+}
+
+/* **Large Screens (Desktops):**
+   This media query applies styles when the viewport is 992px or wider. */
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 48px; /* Fixed size for large screens */
+    }
+    .responsive-text {
+        font-size: 18px; /* Fixed size for large screens */
+    }
+    .content {
+        flex-direction: row; /* Arranges cards horizontally */
+        justify-content: space-between;
+    }
+    .card {
+        flex-basis: 48%; /* Each card takes up about half of the container */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

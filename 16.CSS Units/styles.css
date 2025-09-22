@@ -1,0 +1,176 @@
+/* --- Root (base) settings for the entire document --- */
+html {
+    /* **Absolute Unit:** Sets the base font size for rem units. */
+    font-size: 16px; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.child-box {
+    background-color: #e6f7ff;
+    border: 1px dashed #007bff;
+    margin-top: 10px;
+}
+
+/* --- Absolute Units --- */
+
+.px-units {
+    /* **Absolute Unit:** 100px width. */
+    width: 100px;
+    /* **Absolute Unit:** 20px padding. */
+    padding: 20px;
+}
+.px-units p {
+    /* **Absolute Unit:** 20px font size. */
+    font-size: 20px;
+}
+.px-units .child-box {
+    /* **Absolute Unit:** 100px width. */
+    width: 100px;
+    height: 50px;
+}
+
+.pt-units {
+    /* **Absolute Unit:** 14pt padding. */
+    padding: 14pt;
+}
+.pt-units p {
+    /* **Absolute Unit:** 14pt font size. */
+    font-size: 14pt;
+}
+.pt-units .child-box {
+    /* **Absolute Unit:** 72pt width. */
+    width: 72pt;
+    height: 36pt;
+}
+
+.cm-units {
+    /* **Absolute Unit:** 1cm height. */
+    height: 1cm;
+}
+.cm-units p {
+    /* **Absolute Unit:** 0.5cm line height. */
+    line-height: 0.5cm;
+}
+.cm-units .child-box {
+    /* **Absolute Unit:** 2cm width. */
+    width: 2cm;
+    height: 1cm;
+}
+
+/* --- Relative Units --- */
+
+.parent-em {
+    /* **Absolute Unit:** This sets the context for em. */
+    font-size: 16px; 
+}
+.child-em {
+    /* **Relative Unit:** 1.5 times the font size of its parent (.parent-em), which is 16px * 1.5 = 24px. */
+    font-size: 1.5em; 
+}
+.child-em p {
+    /* **Relative Unit:** 1.5 times the font size of its parent (.child-em), which is 24px * 1.5 = 36px. */
+    font-size: 1.5em;
+    /* **Relative Unit:** 1em padding. */
+    padding: 1em;
+}
+
+.parent-rem {
+    /* No font-size here to show rem's relation to the root font size. */
+    padding: 1rem;
+}
+.child-rem {
+    /* **Relative Unit:** 1.5 times the root font size (html), which is 16px * 1.5 = 24px. */
+    font-size: 1.5rem; 
+}
+.child-rem p {
+    /* **Relative Unit:** 1.5 times the root font size, which is 16px * 1.5 = 24px. */
+    font-size: 1.5rem;
+    /* **Relative Unit:** 1rem margin. */
+    margin: 1rem;
+}
+
+.percent-units {
+    /* **Relative Unit:** 50% of the parent container's width. */
+    width: 50%;
+}
+.percent-units p {
+    /* **Relative Unit:** 120% of the parent's font size. */
+    font-size: 120%; 
+}
+.child-box-percent {
+    /* **Relative Unit:** 50% of its parent's (.percent-units) width. */
+    width: 50%; 
+}
+.child-box-percent-2 {
+    /* **Relative Unit:** 25% of its parent's (.percent-units) width. */
+    width: 25%; 
+}
+
+.viewport-units p {
+    /* **Relative Unit:** 5% of the viewport's width. */
+    font-size: 5vw; 
+}
+.child-vw {
+    /* **Relative Unit:** 25% of the viewport's width. */
+    width: 25vw;
+    height: 50px;
+}
+.child-vh {
+    /* **Relative Unit:** 10% of the viewport's height. */
+    height: 10vh;
+    width: 100px;
+}
+
+.viewport-units-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+}
+.child-vmin {
+    /* **Relative Unit:** 15% of the smaller viewport dimension (width or height). */
+    width: 15vmin;
+    height: 15vmin;
+}
+.child-vmax {
+    /* **Relative Unit:** 15% of the larger viewport dimension (width or height). */
+    width: 15vmax;
+    height: 15vmax;
+}

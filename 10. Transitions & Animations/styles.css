@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 120px); /* 5 columns of 120px */
+    grid-template-rows: repeat(4, 120px);   /* 4 rows of 120px */
+    gap: 20px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: #3498db;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Transition Boxes (Hover Effects) --- */
+
+/* All transition boxes will change background, scale, and rotate on hover */
+.transition-box-1, .transition-box-2, .transition-box-3, .transition-box-4, .transition-box-5,
+.transition-box-6, .transition-box-7, .transition-box-8, .transition-box-9, .transition-box-10 {
+    /* Transition shorthand: property duration timing-function delay */
+    transition: background-color 0.4s ease-out 0s,
+                transform 0.4s ease-out 0s,
+                border-radius 0.4s ease-out 0s;
+}
+
+/* Individual transition properties for demonstration */
+.transition-box-1 { /* Default transition */ }
+.transition-box-1:hover {
+    background-color: #e74c3c;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.transition-box-2 {
+    transition: background-color 0.8s linear 0s,
+                transform 0.8s linear 0s; /* Longer duration, linear timing */
+}
+.transition-box-2:hover {
+    background-color: #f39c12;
+    transform: scale(1.2);
+}
+
+.transition-box-3 {
+    transition: background-color 0.5s ease-in 0.1s, /* Delay on start */
+                transform 0.5s ease-in 0.1s;
+}
+.transition-box-3:hover {
+    background-color: #9b59b6;
+    transform: translateY(-15px);
+}
+
+.transition-box-4 {
+    transition-property: all; /* All animatable properties */
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(1, -0.55, 0.70, 1.55); /* Custom springy effect */
+    transition-delay: 0s;
+}
+.transition-box-4:hover {
+    background-color: #1abc9c;
+    transform: scale(1.3) rotate(-10deg);
+}
+
+.transition-box-5 {
+    transition: transform 0.6s ease-out 0.1s; /* Only transform property transitions */
+    background-color: #2c3e50;
+}
+.transition-box-5:hover {
+    transform: translateX(20px);
+}
+
+.transition-box-6 {
+    transition: background-color 0.4s ease-in-out,
+                box-shadow 7s ease-in-out; /* Transition multiple properties */
+    background-color: #000000;
+}
+.transition-box-6:hover {
+    background-color: #dcf1ff;
+    box-shadow: 100px 100px 200px red;
+}
+
+.transition-box-7 {
+    transition: all 0.7s ease-out 0.2s;
+    background-color: #e67e22;
+}
+.transition-box-7:hover {
+    background-color: #d35400;
+    transform: perspective(100px) rotateY(45deg);
+}
+
+.transition-box-8 {
+    transition: background-color 0.3s steps(5, start); /* Stepped transition */
+    background-color: #c0392b;
+}
+.transition-box-8:hover {
+    background-color: #3cff00;
+}
+
+.transition-box-9 {
+    transition: transform 0.5s ease-in 0s,
+                opacity 0.5s ease-in 0s;
+    background-color: #f1c40f;
+}
+.transition-box-9:hover {
+    transform: scale(0.5);
+    opacity: 0.3;
+}
+
+.transition-box-10 {
+    transition: background-color 0.6s ease 0.3s; /* Longer delay */
+    background-color: #9b59b6;
+}
+.transition-box-10:hover {
+    background-color: #4e00f5;
+}
+
+/* --- Animation Boxes (Continuous Animations) --- */
+
+/* Keyframes definition */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+@keyframes rotate-color {
+    0%   { background-color: #2ecc71; transform: rotate(0deg); }
+    25%  { background-color: #1abc9c; }
+    50%  { background-color: #3498db; transform: rotate(180deg); }
+    75%  { background-color: #9b59b6; }
+    100% { background-color: #2ecc71; transform: rotate(360deg); }
+}
+
+@keyframes pulse-opacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+@keyframes slide-fade {
+    0%   { transform: translateX(0); opacity: 1; }
+    50%  { transform: translateX(50px); opacity: 0.5; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes grow-shrink {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes border-color-change {
+    0%   { border-color: #f1c40f; }
+    33%  { border-color: #e67e22; }
+    66%  { border-color: #c0392b; }
+    100% { border-color: #f1c40f; }
+}
+
+/* Individual animation properties for each box */
+
+.animation-box-1 {
+    background-color: #e74c3c;
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; /* Repeats forever */
+    animation-direction: alternate-reverse; /* Reverses every other cycle */
+    animation-fill-mode: forwards; /* Stays at the end state of the animation cycle after it finishes (though infinite overrides this somewhat) */
+}
+
+.animation-box-2 {
+    background-color: #2ecc71;
+    animation-name: rotate-color;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s; /* Starts after a delay */
+    animation-iteration-count: infinite;
+    animation-direction: normal; /* Always forward */
+    animation-fill-mode: none; /* No styles applied before/after animation */
+}
+
+.animation-box-3 {
+    background-color: #f39c12;
+    animation-name: pulse-opacity;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 3; /* Repeats 3 times */
+    animation-direction: normal;
+    animation-fill-mode: backwards; /* Applies the styles of the first keyframe before animation starts */
+}
+
+.animation-box-4 {
+    background-color: #9b59b6;
+    animation-name: slide-fade;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; /* Reverses and starts from the end */
+    animation-fill-mode: both; /* Applies first keyframe before, last keyframe after */
+}
+
+.animation-box-5 {
+    background-color: #1abc9c;
+    animation-name: shake;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2; /* Shakes twice */
+    animation-direction: normal;
+    animation-fill-mode: forwards; /* Stays at the end state (no more shake after 2 iterations) */
+}
+
+.animation-box-6 {
+    background-color: #34495e;
+    animation-name: grow-shrink;
+    animation-duration: 2.5s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Springy custom curve */
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+}
+
+.animation-box-7 {
+    background-color: #e67e22;
+    border: 5px solid transparent;
+    animation-name: border-color-change;
+    animation-duration: 5s;
+    animation-timing-function: steps(3, end); /* Stepped color change */
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.animation-box-8 {
+    background-color: #c0392b;
+    animation: bounce 1.8s ease-in-out infinite alternate 0.3s; /* Animation shorthand */
+}
+
+.animation-box-9 {
+    background-color: #7f8c8d;
+    animation: rotate-color 6s linear infinite normal 0.7s forwards; /* Animation shorthand */
+}
+
+.animation-box-10 {
+    background-color: #d35400;
+    animation: pulse-opacity 2s ease-in-out 5 alternate-reverse 0s; /* Animation shorthand */
+}

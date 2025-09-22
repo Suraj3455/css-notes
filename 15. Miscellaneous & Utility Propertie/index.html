@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscellaneous CSS Properties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Miscellaneous CSS Properties</h1>
+    </header>
+
+    <main>
+        <section class="section-cursors">
+            <h2>`cursor`, `user-select`, `pointer-events`</h2>
+            <div class="box cursor-pointer">
+                <p>Cursor is `pointer` here</p>
+            </div>
+            <div class="box user-select-none">
+                <p>You can't select this text.</p>
+            </div>
+            <div class="box pointer-events-none">
+                <p>This box is here, but you can't click it.</p>
+                <button onclick="alert('Button clicked!')">Click me</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section-shadows">
+            <h2>`box-shadow` & `text-shadow`</h2>
+            <div class="box box-shadow-example">
+                <p>A box with a drop shadow.</p>
+            </div>
+            <h2 class="text-shadow-example">Shadowed Text</h2>
+        </section>
+
+        <hr>
+
+        <section class="section-outline">
+            <h2>`outline`</h2>
+            <button class="outline-example">Click for an outline</button>
+            <p>This button shows an outline on `:focus`.</p>
+        </section>
+
+        <hr>
+
+        <section class="section-image">
+            <h2>`object-fit`, `object-position`, `filter`</h2>
+            <div class="image-container">
+                <img class="img-fill" src="https://media.gettyimages.com/id/1794765882/photo/mumbai-india-virat-kohli-of-india-celebrates-after-scoring-a-century-overtaking-sachin.jpg?s=612x612&w=gi&k=20&c=Z1p_dsw3DQFkIG49fKp5fKKMPXvlJjyiuqhlyv2GPdk=" alt="A landscape image">
+            </div>
+            <div class="image-container">
+                <img class="img-contain" src="https://media.gettyimages.com/id/1794765882/photo/mumbai-india-virat-kohli-of-india-celebrates-after-scoring-a-century-overtaking-sachin.jpg?s=612x612&w=gi&k=20&c=Z1p_dsw3DQFkIG49fKp5fKKMPXvlJjyiuqhlyv2GPdk=" alt="A landscape image">
+            </div>
+            <div class="image-container">
+                <img class="img-cover" src="https://media.gettyimages.com/id/1794765882/photo/mumbai-india-virat-kohli-of-india-celebrates-after-scoring-a-century-overtaking-sachin.jpg?s=612x612&w=gi&k=20&c=Z1p_dsw3DQFkIG49fKp5fKKMPXvlJjyiuqhlyv2GPdk=" alt="A landscape image">
+            </div>
+            <div class="image-container">
+                <img class="img-position" src="https://media.gettyimages.com/id/1794765882/photo/mumbai-india-virat-kohli-of-india-celebrates-after-scoring-a-century-overtaking-sachin.jpg?s=612x612&w=gi&k=20&c=Z1p_dsw3DQFkIG49fKp5fKKMPXvlJjyiuqhlyv2GPdk=" alt="A landscape image">
+            </div>
+            <div class="image-container">
+                <img class="img-filter" src="https://media.gettyimages.com/id/1794765882/photo/mumbai-india-virat-kohli-of-india-celebrates-after-scoring-a-century-overtaking-sachin.jpg?s=612x612&w=gi&k=20&c=Z1p_dsw3DQFkIG49fKp5fKKMPXvlJjyiuqhlyv2GPdk=" alt="A landscape image">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section-clip-path">
+            <h2>`clip-path`</h2>
+            <div class="clipped-box"></div>
+        </section>
+
+        <hr>
+
+        <section class="section-scroll">
+            <h2>`scroll-behavior`</h2>
+            <p>Click <a href="#target">this link</a> to smoothly scroll to the bottom.</p>
+            <div class="scroll-target" id="target">
+                <p>This is the target section. The page should have scrolled smoothly to here.</p>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

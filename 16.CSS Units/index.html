@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Demonstration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Units</h1>
+    </header>
+
+    <main>
+        <section class="section-absolute">
+            <h2>Absolute Units (px, pt, cm)</h2>
+            <div class="box px-units">
+                <p>20px font size.</p>
+                <div class="child-box">100px width.</div>
+            </div>
+            <div class="box pt-units">
+                <p>14pt font size.</p>
+                <div class="child-box">72pt width.</div>
+            </div>
+            <div class="box cm-units">
+                <p>1cm height.</p>
+                <div class="child-box">2cm width.</div>
+            </div>
+        </section>
+
+        <section class="section-relative">
+            <h2>Relative Units (em, rem, %, vw, vh, vmin, vmax)</h2>
+            <div class="box parent-em">
+                <p>16px parent font.</p>
+                <div class="child-em">
+                    <p>1.5em font size.</p>
+                </div>
+            </div>
+            <div class="box parent-rem">
+                <p>16px root font.</p>
+                <div class="child-rem">
+                    <p>1.5rem font size.</p>
+                </div>
+            </div>
+            <div class="box percent-units">
+                <p>50% width.</p>
+                <div class="child-box-percent">50% of parent.</div>
+                <div class="child-box-percent-2">25% of parent.</div>
+            </div>
+            <div class="box viewport-units">
+                <p>5vw text size.</p>
+                <div class="child-vw">25vw width.</div>
+                <div class="child-vh">10vh height.</div>
+            </div>
+            <div class="box viewport-units-2">
+                <div class="child-vmin">15vmin width.</div>
+                <div class="child-vmax">15vmax height.</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
